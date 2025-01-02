@@ -9,10 +9,16 @@
 
     <meta name="viewport" content="width=device-widts, initial-sclae=1.0">
     <meta charset="UTF-8">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
 </head>
 
 
-<body style="background-color: lightgreen;">
+<body style="background-color: white;">
 
 
     <h1>Strona internetowa o Zaspie</h1>
@@ -20,34 +26,203 @@
 
     <h2>
         <a href="/brief/brief.html" target="_self" title="Krótko o Zaspie">
-            Krótko o Zaspie
+            <Button style="font-size: 
+                           20px; font: 
+                           Segoe UI; 
+                           width: 200px;
+                           border: 1px solid black;
+                           background-color: transparent;
+                           margin: 10px;"
+                    onmouseover="this.style.border='2px solid blue'" 
+                    onmouseout="this.style.border='1px solid black'"
+            >
+                Krótko o Zaspie
+            </Button>
         </a>
     </h2>
 
     <h2>
         <a href="history/history.html" target="_self" title="Historia Zaspy">
-            Historia Zaspy
+            <Button style="font-size: 
+                           20px; font: 
+                           Segoe UI; 
+                           width: 200px;
+                           border: 1px solid black;
+                           background-color: transparent;
+                           margin: 10px;"
+                    onmouseover="this.style.border='2px solid blue'" 
+                    onmouseout="this.style.border='1px solid black'"
+            >
+                Historia Zaspy
+            </Button>
         </a>
     </h2>
 
     <h2>
         <a href="council/council.html" target="_self" title="Rada Zaspy">
-            Rada Zaspy
+            <Button style="font-size: 
+                           20px; font: 
+                           Segoe UI; 
+                           width: 200px;
+                           border: 1px solid black;
+                           background-color: transparent;
+                           margin: 10px;"
+                    onmouseover="this.style.border='2px solid blue'" 
+                    onmouseout="this.style.border='1px solid black'"
+            >
+                Rada Zaspy
+            </Button>
         </a>
     </h2>
 
     <h2>
         <a href="gallery/gallery.html" target="_self" title="Galeria">
-            Galeria
+            <Button style="font-size: 
+                           20px; font: 
+                           Segoe UI; 
+                           width: 200px;
+                           border: 1px solid black;
+                           background-color: transparent;
+                           margin: 10px;"
+                    onmouseover="this.style.border='2px solid blue'" 
+                    onmouseout="this.style.border='1px solid black'"
+            >
+                Galeria
+            </Button>
         </a>
     </h2>
 
     <h2>
         <a href="contact/contact.html" target="_self" title="Kontakt">
-            Kontakt
+            <Button style="font-size: 
+                           20px; font: 
+                           Segoe UI; 
+                           width: 200px;
+                           border: 1px solid black;
+                           background-color: transparent;
+                           margin: 10px;"
+                    onmouseover="this.style.border='2px solid blue'" 
+                    onmouseout="this.style.border='1px solid black'"
+            >
+                Kontakt
+            </Button>
         </a>
+        
     </h2>
 
+    <br>
+    <br>
+    <br>
+
+    <button style="width: 100px; 
+                   height: 50px; 
+                   margin: 10px; 
+                   border: 1px solid black;
+                   background-color: transparent;
+                   font-size: 20px;
+                   font: Segoe UI;" 
+            onmouseover="this.style.border='2px solid blue'" 
+            onmouseout="this.style.border='1px solid black'"
+            id="button1"
+            onclick="button1Handler()"
+    >
+        Z
+    </button>
+
+    <button style="width: 100px; 
+                   height: 50px; 
+                   margin: 10px; 
+                   border: 1px solid black;
+                   background-color: transparent;
+                   font-size: 20px;
+                   font: Segoe UI;"   
+            onmouseover="this.style.border='2px solid blue'" 
+            onmouseout="this.style.border='1px solid black'"
+            id="button2"
+            onclick="button2Handler()"
+    >
+        A
+    </button>
+
+    <button style="width: 100px; 
+                   height: 50px; 
+                   margin: 10px; 
+                   border: 1px solid black;
+                   background-color: transparent;
+                   font-size: 20px;
+                   font: Segoe UI;"   
+            onmouseover="this.style.border='2px solid blue'" 
+            onmouseout="this.style.border='1px solid black'"
+            id="button3"
+            onclick="button3Handler()"
+    >
+        S
+    </button>
+
+    <button style="width: 100px; 
+                   height: 50px; 
+                   margin: 10px; 
+                   border: 1px solid black;
+                   background-color: transparent;
+                   font-size: 20px;
+                   font: Segoe UI;"   
+            onmouseover="this.style.border='2px solid blue'" 
+            onmouseout="this.style.border='1px solid black'"
+            id="button4"
+            onclick="button4Handler()"
+    >
+        P        
+    </button>
+
+    <button style="width: 100px; 
+                   height: 50px; 
+                   margin: 10px; 
+                   border: 1px solid black;
+                   background-color: transparent;
+                   font-size: 20px;
+                   font: Segoe UI;"   
+            onmouseover="this.style.border='2px solid blue'" 
+            onmouseout="this.style.border='1px solid black'"
+            id="button5"
+            onclick="button5Handler()"
+    >
+        A
+    </button>
+
+    <script>
+        function button1Handler() {
+            document.body.style.backgroundColor = 'lightgreen';
+        }
+    </script>
+    
+    <script>
+        function button2Handler() {
+            document.body.style.backgroundColor = 'orange';
+        }
+    </script>
+
+    <script>
+        function button3Handler() {
+            document.body.style.backgroundColor = 'lightcoral';
+        }
+    </script>
+
+    <script>
+        function button4Handler() {
+            document.body.style.backgroundColor = 'cyan';
+        }
+    </script>
+
+    <script>
+        function button5Handler() {
+
+            let randVal1 = Math.floor(Math.random() * 256);
+            let randVal2 = Math.floor(Math.random() * 256);
+            let randVal3 = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor = `rgb(${randVal1}, ${randVal2}, ${randVal3})`;
+        }
+    </script>
 
 </body>
 
