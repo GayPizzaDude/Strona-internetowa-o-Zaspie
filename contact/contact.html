@@ -64,6 +64,53 @@
             </button>
         </a>
     </h3>
+
+    <br>
+    
+    <h2>
+        Napisz list do Zaspy
+    </h2>
+
+    <form>
+        <div style="margin: 15px;">
+            <label>
+                Imię
+            </label>
+            <input type="text">
+    
+            <label>
+                Nazwisko
+            </label>
+            <input type="text">
+        </div>
+
+        <div style="margin: 15px;">
+            <label>
+                Jak na ciebie mówią / pseudonim
+            </label>
+            <input type="text" id="pseudonim input">
+        </div>
+
+        <div style="margin: 15px;">
+            <textarea rows="15" cols="60" style="resize: none;" id="textarea input"></textarea>
+        </div>
+
+
+
+    </form>
+
+    <Button style="font-size: 15px; 
+                   font: Segoe UI; 
+                   width: 180px;
+                   border: 1px solid black;
+                   background-color: transparent;
+                   margin: 15px;"
+            onmouseover="this.style.border='2px solid blue'" 
+            onmouseout="this.style.border='1px solid black'"
+            onclick="sendButtonHandler()"
+    >
+        Wyślij do list do Zaspy
+    </button>
     
     <br>
     <br>
@@ -84,6 +131,38 @@
             </button>
         </a>
     </h2>
+
+    <h1 style="visibility: hidden;" id="send confirmation">
+        Wysłano list do Zaspy
+    </h1>
+
+    <script>
+        function sendButtonHandler() {
+
+            const pseudonimValue = document.getElementById("pseudonim input").value.trim();
+            const textareaValue = document.getElementById("textarea input").value.trim();
+
+            if (pseudonimValue === '' && textareaValue === '') {
+                document.getElementById("send confirmation").style.visibility = "visible";
+                document.getElementById("send confirmation").innerText = "Jeżeli chcesz pisać list do Zaspy to przynajmniej coś napisz i podaj swój pseudonim";
+            }
+
+            else if (pseudonimValue !== '' && textareaValue === '') {
+                document.getElementById("send confirmation").style.visibility = "visible";
+                document.getElementById("send confirmation").innerText = "Jeżeli chcesz pisać list do Zaspy to przynajmniej coś napisz";
+            }
+
+            else if (pseudonimValue === '' && textareaValue !== '') {
+                document.getElementById("send confirmation").style.visibility = "visible";
+                document.getElementById("send confirmation").innerText = "Jeżeli chcesz pisać list do Zaspy to przynajmniej podaj swój pseudonim";
+            }
+
+            else {
+                document.getElementById("send confirmation").style.visibility = "visible";
+                document.getElementById("send confirmation").innerText = "Wysłano list do Zaspy";
+            }
+        }
+    </script>
 
 </body>
 
